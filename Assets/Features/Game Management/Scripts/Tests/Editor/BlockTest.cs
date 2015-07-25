@@ -36,7 +36,7 @@ namespace Tetris.Tests
         {
             //arrange
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(1.0f); //one second
+            time.TimeSinceLevelLoad.Returns(1.0f); //one second
             block.Time = time;
             
             //Act
@@ -50,7 +50,7 @@ namespace Tetris.Tests
         public void ShouldNotMoveWhenOffTic()
         {
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(0.0f);
+            time.TimeSinceLevelLoad.Returns(0.0f);
             block.Time = time;
 
             bool pass = block.CanMove();
@@ -63,7 +63,7 @@ namespace Tetris.Tests
         {
             //arrange
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(1.0f);
+            time.TimeSinceLevelLoad.Returns(1.0f);
             block.Time = time;
             
             IInput input = Substitute.For<IInput>();
@@ -83,7 +83,7 @@ namespace Tetris.Tests
         {
             //arrange
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(0.0f);
+            time.TimeSinceLevelLoad.Returns(0.0f);
             block.Time = time;
 
             IInput input = Substitute.For<IInput>();
@@ -103,7 +103,7 @@ namespace Tetris.Tests
         {
             //arrange
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(1.0f);
+            time.TimeSinceLevelLoad.Returns(1.0f);
             block.Time = time;
 
             IInput input = Substitute.For<IInput>();
@@ -123,7 +123,7 @@ namespace Tetris.Tests
         {
             //arrange
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(0.0f);
+            time.TimeSinceLevelLoad.Returns(0.0f);
             block.Time = time;
 
             IInput input = Substitute.For<IInput>();
@@ -143,8 +143,8 @@ namespace Tetris.Tests
         public void ShouldNotMoveHorzontallyWhenPaused()
         {
             ITime time = Substitute.For<ITime>();
-            time.TimeSinceLevelLoaded.Returns(30f);
-            time.Pause();
+            time.TimeSinceLevelLoad.Returns(30f);
+           // time.Pause();
             block.Time = time;
 
             IInput input = Substitute.For<IInput>();

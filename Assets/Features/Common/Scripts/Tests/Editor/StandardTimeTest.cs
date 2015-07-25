@@ -26,7 +26,6 @@ namespace gov.nasa.ksc.it.itacl.common.tests
             standardTime = null;
         }
 
-
         [Test]
         public void ShouldHaveCorrectDeltaTime()
         {
@@ -34,12 +33,9 @@ namespace gov.nasa.ksc.it.itacl.common.tests
         }
 
         [Test]
-        public void ShouldHaveCorrectTimeSinceLevelLoaded()]
+        public void ShouldHaveCorrectTimeSinceLevelLoaded()
         {
+            Assert.AreEqual(Time.timeSinceLevelLoad, standardTime.TimeSinceLevelLoad, "Standard Time could not calculate time since level loaded correctly.");
         }
-
-
-
-        
     }
 }

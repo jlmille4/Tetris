@@ -11,7 +11,7 @@ namespace gov.nasa.ksc.it.itacl.common
             get { return Time.deltaTime; }
         }
 
-        public float TimeSinceLevelLoaded
+        public float TimeSinceLevelLoad
         {
             get { return Time.timeSinceLevelLoad; }
         }

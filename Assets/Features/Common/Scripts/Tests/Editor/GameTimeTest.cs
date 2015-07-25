@@ -80,7 +80,7 @@ namespace gov.nasa.ksc.it.itacl.common.tests
                 gameTime.Update();
             }
 
-            Assert.AreEqual(2.5f, gameTime.TimeSinceLevelLoaded, "GameTime could not update TimeSinceLevelLoaded correctly");
+            Assert.AreEqual(2.5f, gameTime.TimeSinceLevelLoad, "GameTime could not update TimeSinceLevelLoaded correctly");
         }
 
         [Test]
@@ -102,7 +102,7 @@ namespace gov.nasa.ksc.it.itacl.common.tests
                 gameTime.Update();
             }
 
-            Assert.AreEqual(2.5f, gameTime.TimeSinceLevelLoaded, "GameTime could not update TimeSinceLevelLoaded correctly");
+            Assert.AreEqual(2.5f, gameTime.TimeSinceLevelLoad, "GameTime could not update TimeSinceLevelLoaded correctly");
         }
 
         [Test]
@@ -132,7 +132,7 @@ namespace gov.nasa.ksc.it.itacl.common.tests
                 gameTime.Update();
             }
 
-            Assert.AreEqual(5.0f, gameTime.TimeSinceLevelLoaded, "GameTime could not update TimeSinceLevelLoaded correctly");
+            Assert.AreEqual(5.0f, gameTime.TimeSinceLevelLoad, "GameTime could not update TimeSinceLevelLoaded correctly");
         }
 
         [Test]

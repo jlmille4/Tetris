@@ -13,7 +13,7 @@ namespace gov.nasa.ksc.it.itacl.common
             }
         }
 
-        public float TimeSinceLevelLoaded
+        public float TimeSinceLevelLoad
         {
             get
             {

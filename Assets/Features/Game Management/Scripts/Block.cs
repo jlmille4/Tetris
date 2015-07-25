@@ -47,7 +47,7 @@ public class Block : MonoBehaviour, IRequireInput, IRequireTime
 
             transform.Translate(transform.right * dir, Space.Self);
 
-            lastMovement = Time.TimeSinceLevelLoaded;
+            lastMovement = Time.TimeSinceLevelLoad;
 
         }
     }
@@ -59,6 +59,6 @@ public class Block : MonoBehaviour, IRequireInput, IRequireTime
 
     public bool CanMove()
     {
-        return (Time.TimeSinceLevelLoaded - lastMovement) > HorizontalSpeed;
+        return (Time.TimeSinceLevelLoad - lastMovement) > HorizontalSpeed;
     }
 }
